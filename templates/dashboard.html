@@ -1,0 +1,71 @@
+
+  {% block title %}
+  <title>Dashboard</title>
+  {% endblock %}
+  {% block style %}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f7;
+    }
+
+    .navbar {
+      background-color: #2c3e50;
+      padding: 15px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .logout-button {
+      background-color: #e74c3c;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .logout-button:hover {
+      background-color: #c0392b;
+    }
+
+    .dashboard-content {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .dashboard-content h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .dashboard-content p {
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+ {% endblock %}  
+
+  {% block pro %}
+  <div class="navbar">
+    <h1>Dashboard</h1>
+    <form action="/logout" method="POST">
+      <button class="logout-button">Logout</button>
+    </form>
+  </div>
+
+  <div class="dashboard-content">
+    <h2>Welcome, {{name}}</h2>
+    <p>This is your dashboard. You can display user data or analytics here.</p>
+  </div>
+  {% endblock %}
+

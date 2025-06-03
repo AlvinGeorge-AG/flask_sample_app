@@ -1,0 +1,157 @@
+  {% extends "layout.html" %}
+  {% block title %}
+        <title>Welcome to My Web App</title>
+  {% endblock %}
+  {% block style %}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    .nav-buttons a {
+      color: white;
+      background-color: #3498db;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-left: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background-color: #2980b9;
+    }
+
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      color: #2c3e50;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .hero .cta-buttons a {
+      display: inline-block;
+      background-color: #2c3e50;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .hero .cta-buttons a:hover {
+      background-color: #1a252f;
+    }
+
+    .articles {
+      padding: 60px 40px;
+      background-color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #ecf0f1;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+    }
+  </style>
+  {% endblock %}  
+
+  {% block pro %}
+  <header>
+    <h1>My Web App</h1>
+    <div class="nav-buttons">
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Your Personal Dashboard</h2>
+    <p>Manage your profile, access articles, and explore personalized content all in one place.</p>
+    <div class="cta-buttons">
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+      <a href="/reset">ResetPassowrd</a>
+    </div>
+  </section>
+
+  <section class="articles">
+    <div class="card">
+      <h3>Track Your Progress</h3>
+      <p>See analytics and monitor your daily activity on your personalized dashboard.</p>
+    </div>
+    <div class="card">
+      <h3>Latest Articles</h3>
+      <p>Stay updated with our curated articles on productivity, tech, and development tips.</p>
+    </div>
+    <div class="card">
+      <h3>Community Features</h3>
+      <p>Connect with others, share ideas, and participate in discussions inside the platform.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Web App. All rights reserved.</p>
+  </footer>
+  {% endblock %}
